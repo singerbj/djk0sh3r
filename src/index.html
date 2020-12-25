@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Guardian Faceoff</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/javascript">
+        window.RESOURCES = {
+            BUNGIE_APP_ID: "<%= htmlWebpackPlugin.options.globalConstants.BUNGIE_APP_ID %>",
+            BUNGIE_API_KEY: "<%= htmlWebpackPlugin.options.globalConstants.BUNGIE_API_KEY %>",
+            VERSION: "<%= htmlWebpackPlugin.options.globalConstants.VERSION %>",
+            PRODUCTION: "<%= htmlWebpackPlugin.options.globalConstants.PRODUCTION %>"
+        };
+    </script>
+</body>
+
+</html>

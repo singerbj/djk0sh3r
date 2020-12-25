@@ -1,0 +1,47 @@
+{
+    "TOKEN_URL": "https://www.bungie.net/Platform/App/OAuth/token/",
+    "MATCH_EXPIRE_TIME": 600000,
+    "MATCH_PLAY_EXPIRE_TIME": 900000,
+    "LOCALE": {},
+    "MEMBERSHIP_TYPES": {
+        "1": "Xbox",
+        "2": "Psn",
+        "3": "Steam",
+        "4": "Blizzard",
+        "5": "Stadia",
+        "10": "Demon",
+        "-1": "All",
+        "XBOX": 1,
+        "PSN": 2,
+        "STEAM": 3,
+        "BLIZZARD": 4,
+        "STADIA": 5,
+        "DEMON": 10,
+        "ALL": -1
+    },
+    "MATCH_STATE": {
+        "WAITING_FOR_PLAYERS": 1,
+        "IN_PROGRESS": 2,
+        "COMPLETE": 3,
+        "EXPIRED": 4,
+        "PLAYER_QUIT": 5,
+        "1": "Waiting for Players",
+        "2": "In Progress",
+        "3": "Completed",
+        "4": "Expired",
+        "5": "Player Quit/Disconnected"
+    },
+    "ACTIVITY_MODES": {
+        "ALL_PVP": 5,
+        "PRIVATE_MATCHES_ALL": 32,
+        "PRIVATE_MATCHES_CLASH": 51,
+        "PRIVATE_MATCHES_CONTROL": 52,
+        "PRIVATE_MATCHES_SUPREMACY": 53,
+        "PRIVATE_MATCHES_COUNTDOWN": 54,
+        "PRIVATE_MATCHES_SURVIVAL": 55,
+        "PRIVATE_MATCHES_MAYHEM": 56,
+        "PRIVATE_MATCHES_RUMBLE": 57
+    },
+    "IMG_URL_ROOT": "https://www.bungie.net",
+    "AUTHORIZE_URL": "https://www.bungie.net/en/OAuth/Authorize?client_id=%s&response_type=code&state="
+}
