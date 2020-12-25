@@ -45,6 +45,17 @@ module.exports = (env, argv) => {
                         },
                     ],
                 },
+                {
+                    test: /\.(png|jp(e*)g|svg|gif)$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: 'images/[hash]-[name].[ext]',
+                            },
+                        },
+                    ],
+                },
             ],
         },
         devtool: 'source-map',
@@ -54,8 +65,6 @@ module.exports = (env, argv) => {
                 template: 'src/index.html',
                 scriptLoading: 'defer',
                 globalConstants: {
-                    BUNGIE_APP_ID: '34894',
-                    BUNGIE_API_KEY: 'a4bb5c8feec940eeb7d8167fda39e31b',
                     VERSION: '0.0.1',
                     PRODUCTION: isProd,
                 },

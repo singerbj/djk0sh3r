@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashRouter } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -8,14 +7,20 @@ import { grey, teal } from '@material-ui/core/colors';
 // import { AppContextWrapper } from './AppContext';
 // import Routes from './Routes';
 // import SnackBarManager from './SnackBarManager';
+import { DJKLogo } from './components/DJKLogo';
+import { Links } from './components/Links';
 
 const useStyles = makeStyles((theme) => {
     return {
         box: {
             display: 'flex',
-            flexDirection: 'column',
+            // flexDirection: 'column',
             height: '100vh',
             maWidth: '100vw',
+            background: '#FAFAFA',
+            textAlign: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
         },
         container: {
             flex: '1 auto',
@@ -45,24 +50,35 @@ const App = () => {
         });
     }, []);
 
+    // return (
+    //     {/*<HashRouter>
+    //          <AppContextWrapper> */}
+    //         <ThemeProvider theme={theme}>
+    //             <CssBaseline />
+    //             <Box className={classes.box}>
+    //                 {/* <Box className={classes.navigation}>
+    //                     <Navigation />
+    //                 </Box> */}
+    //                 <Box className={classes.container}>
+    //                     {/* <Routes />
+    //                     <SnackBarManager /> */}
+    //                     <DJKLogo className={classes.svg} width={350} />
+    //                 </Box>
+    //             </Box>
+    //         </ThemeProvider>
+    //         {/* </AppContextWrapper>
+    //     </HashRouter>*/}
+    // );
     return (
-        <HashRouter>
-            {/* <AppContextWrapper> */}
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <Box className={classes.box}>
-                    {/* <Box className={classes.navigation}>
-                            <Navigation />
-                        </Box>
-                        <Box className={classes.container}>
-                            <Routes />
-                            <SnackBarManager />
-                        </Box> */}
-                    {'<3 DJK0SH3R'}
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Box className={classes.box}>
+                <Box className={classes.container}>
+                    <DJKLogo className={classes.svg} width={350} />
+                    <Links />
                 </Box>
-            </ThemeProvider>
-            {/* </AppContextWrapper> */}
-        </HashRouter>
+            </Box>
+        </ThemeProvider>
     );
 };
 
