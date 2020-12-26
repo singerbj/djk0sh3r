@@ -26,6 +26,7 @@ const firebaseConfig = {
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+    firebase.analytics().logEvent('user_visited_page');
 }
 
 const useStyles = makeStyles((theme) => {
