@@ -1,14 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Link } from '@material-ui/core';
-import { FaTwitch, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaTwitch, FaInstagram, FaTwitter, FaYoutube, FaFacebook } from 'react-icons/fa';
 import { IoLogoTiktok } from 'react-icons/io5';
 
 const useStyles = makeStyles((theme) => {
     return {
         links: {
             animation: `$myEffect 750ms ${theme.transitions.easing.easeInOut} 2000ms 1 normal forwards`,
-            width: 350,
+            width: 400,
             maxWidth: '90%',
             opacity: 0,
             transition: 'width 750ms',
@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => {
         },
         icon: {
             color: '#202020',
-            marginLeft: theme.spacing(2),
-            marginRight: theme.spacing(2),
-            width: 30,
-            height: 30,
+            marginLeft: theme.spacing(1.5),
+            marginRight: theme.spacing(1.5),
+            width: 25,
+            height: 25,
         },
     };
 });
@@ -61,6 +61,9 @@ export const Links = () => {
                 </Link>
                 <Link href="https://www.tiktok.com/@djk0sh3r">
                     <IoLogoTiktok className={classes.icon} />
+                </Link>
+                <Link href="https://facebook.com/DJK0SH3R">
+                    <FaFacebook className={classes.icon} />
                 </Link>
             </Box>
         </Box>
