@@ -1,4 +1,6 @@
 import React from 'react';
+import firebase from 'firebase/app';
+import 'firebase/analytics';
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -9,6 +11,22 @@ import { grey, teal } from '@material-ui/core/colors';
 // import SnackBarManager from './SnackBarManager';
 import { DJKLogo } from './components/DJKLogo';
 import { Links } from './components/Links';
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: 'AIzaSyAwq9apnVlkn1v5XOZvYc_1bLevxKkqSt0',
+    authDomain: 'djk0sh3r.firebaseapp.com',
+    projectId: 'djk0sh3r',
+    storageBucket: 'djk0sh3r.appspot.com',
+    messagingSenderId: '646219596353',
+    appId: '1:646219596353:web:909bef14ee56c3cc157cc0',
+    measurementId: 'G-WE3Q9DKF0D',
+};
+// Initialize Firebase App
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+}
 
 const useStyles = makeStyles((theme) => {
     return {

@@ -82,3 +82,5 @@ bungie-dev.json
 .runtimeconfig.json
 
 guardian-faceoff-firebase-adminsdk*
+
+vid-script/*.mp4

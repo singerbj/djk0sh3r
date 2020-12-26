@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Link } from '@material-ui/core';
 import { FaTwitch, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { IoLogoTiktok } from 'react-icons/io5';
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -57,6 +58,9 @@ export const Links = () => {
                 </Link>
                 <Link href="https://twitter.com/djk0sh3r">
                     <FaTwitter className={classes.icon} />
+                </Link>
+                <Link href="https://www.tiktok.com/@djk0sh3r">
+                    <IoLogoTiktok className={classes.icon} />
                 </Link>
             </Box>
         </Box>
